@@ -3,6 +3,8 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+industry_doc.txt
+
 # C extensions
 *.so
 
