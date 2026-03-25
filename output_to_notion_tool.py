@@ -156,3 +156,16 @@ status = log_to_notion(
 
 print(f"Logged to Notion — run {run_number} — status: {status}")
 print(f"\nSummary: {summary_comment.text}")
+
+
+from IPython.display import display, Javascript
+display(Javascript('''
+// Note: This only works in Google Colab / Jupyter notebooks
+var cells = Jupyter.notebook.get_cells();
+for (var i = 0; i < cells.length; i++) {
+    if (cells[i].get_text().includes("prompt =")) {
+        cells[i].set_text('prompt = ""');
+        break;
+    }
+}
+'''))    
